@@ -5,7 +5,7 @@ name: Lab2 application
 
 on:
   push:
-    branches: [ "main", "development" ]
+    branches: [ "main", "development", "release" ]
   pull_request:
     branches: [ "main", "development" ]
 
