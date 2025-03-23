@@ -1,6 +1,7 @@
 # Calculator Application
 
 [![Python CI](https://github.com/ariinabel/lab_2/actions/workflows/python.yml/badge.svg)](https://github.com/ariinabel/lab_2/actions)
+
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/ariinabel/lab_2/actions)
 
 A simple calculator implementation with basic arithmetic operations.
