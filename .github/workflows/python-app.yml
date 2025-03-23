@@ -42,6 +42,7 @@ jobs:
   automerge:
     name: Enable automerge on dependabot PRs
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
     steps:
       - name: Enable automerge on dependabot PRs
         uses: daneden/enable-automerge-action@v1
