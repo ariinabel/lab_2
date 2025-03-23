@@ -29,6 +29,7 @@ def test_subtraction(calc, a, b, expected):
 def test_multiplication(calc, a, b, expected):
     assert calc.multiply(a, b) == expected
 
+
 @pytest.mark.parametrize("a, b, expected", [
     (10, 2, 5.0),
     (9, 3, 3.0),
