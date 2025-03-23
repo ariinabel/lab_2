@@ -1,0 +1,37 @@
+name: Documentation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-dev.txt
+
+      - name: Generate API docs
+        run: |
+          mkdocs build
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/development'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          # Add these new settings:
+          keep_files: true
+          destination_dir: .
+          user_name: "ariinabel"
+          user_email: "arina_belyakova04@mail.ru"

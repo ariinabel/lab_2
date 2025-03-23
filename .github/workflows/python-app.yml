@@ -5,39 +5,29 @@ name: Lab2 application
 
 on:
   push:
-    branches: [ "main", "development" ]
+    branches: ["main", "development"]
   pull_request:
-    branches: [ "main", "development" ]
+    branches: ["main", "development"]
 
 permissions:
   contents: write
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt 
-    - name: Test with pytest
-      run: |
-        pytest
+      - name: Test with pytest
+        run: |
+          pytest
 
-    - name: Enable auto-merge for PR
-      if: github.event_name == 'pull_request'
-      uses: peter-evans/enable-pull-request-automerge@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        pull-request-number: ${{ github.event.pull_request.number }}
-        merge-method: squash
+      - name: Enable auto-merge for PR
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: squash
 
   automerge:
     name: Enable automerge on dependabot PRs
@@ -47,16 +37,11 @@ jobs:
       - name: Enable automerge on dependabot PRs
         uses: daneden/enable-automerge-action@v1
         with:
-          # A personal access token that you have generated and saved in the
-          # repo or org’s encrypted secrets
-          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-
-          # The name of the PR author to enable automerge for
-          # Defaults to dependabot[bot]
-          allowed-author: "dependabot[bot]"
-
-          # Allowed values: MERGE | SQUASH | REBASE
-          # Defaults to MERGE
-          merge-method: MERGE
-
-          
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Test with pytest
+        run: |
+          pytest
