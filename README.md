@@ -1,6 +1,6 @@
 # Calculator Application
 
-[![Python CI](https://github.com/ariinabel/lab_2/actions/workflows/python.yml/badge.svg)](https://github.com/ariinabel/lab_2/actions)
+[![Python CI](https://github.com/ariinabel/lab_2/actions/workflows/test-and-docs.yml/badge.svg)](https://github.com/ariinabel/lab_2/actions)
 
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/ariinabel/lab_2/actions)
 
@@ -38,7 +38,7 @@ pip install -r requirements-dev.txt
 pytest --cov=src --cov-report=term-missing tests/ -v
 ```
 
-[![Documentation Status](https://github.com/ariinabel/lab_2/actions/workflows/docs.yml/badge.svg)](https://ariinabel.github.io/lab_2/)
+[![Documentation Status](https://github.com/ariinabel/lab_2/actions/workflows/test-and-docs.yml/badge.svg)](https://ariinabel.github.io/lab_2/)
 
 ## Documentation
 Automatically generated documentation is published on [GitHub Pages](https://ariinabel.github.io/lab_2/).
