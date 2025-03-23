@@ -25,13 +25,11 @@ jobs:
           mkdocs build
 
       - name: Deploy to GitHub Pages
-        #if: github.ref == 'refs/heads/development'
+        if: github.ref == 'refs/heads/main' # Only deploy on push to main
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          # Add these new settings:
-          keep_files: true
-          destination_dir: .
+          keep_files: false # Clean the branch before deployment
           user_name: "ariinabel"
           user_email: "arina_belyakova04@mail.ru"
