@@ -21,7 +21,6 @@ def test_addition(calc, a, b, expected):
 def test_subtraction(calc, a, b, expected):
     assert calc.subtract(a, b) == expected
 
-
 @pytest.mark.parametrize("a, b, expected", [
     (3, 4, 12),
     (0, 5, 0),
