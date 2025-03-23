@@ -20,7 +20,7 @@ jobs:
 
   automerge:
     name: Enable automerge on dependabot PRs
-    needs: ["python-app", "docs"]
+    needs: jobs
     runs-on: ubuntu-latest
     steps:
       - name: Enable automerge on dependabot PRs
