@@ -39,15 +39,23 @@ jobs:
         pull-request-number: ${{ github.event.pull_request.number }}
         merge-method: squash
 
-    - name: Action-Automerge
-      # You may pin to the exact commit or the version.
-      # uses: mtanzi/action-automerge@8cc3ee735eafeedb690f2600be700d5d8548ae91
-      uses: mtanzi/action-automerge@v1
-      with:
-        # Token to authenticate with GitHub
-        github_token: ${{ github.token }}
-        # Source branch you want to merge into the target.
-        source: "development"
-        # Target branch, where the source branch is going to be merged into
-        target: "main"
+  automerge:
+    name: Enable automerge on dependabot PRs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable automerge on dependabot PRs
+        uses: daneden/enable-automerge-action@v1
+        with:
+          # A personal access token that you have generated and saved in the
+          # repo or org’s encrypted secrets
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+          # The name of the PR author to enable automerge for
+          # Defaults to dependabot[bot]
+          allowed-author: "dependabot[bot]"
+
+          # Allowed values: MERGE | SQUASH | REBASE
+          # Defaults to MERGE
+          merge-method: MERGE
+
           
