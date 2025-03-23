@@ -177,12 +177,18 @@ git checkout -b release
 [Документация](https://github.com/ariinabel/lab_2/blob/main/README.md)
 
 Тег:
-![alt text](image.png)
 
-12) Настройте автоматическую генерацию документации при каждом
+![alt text](images/image5.png)
+
+1)   Настройте автоматическую генерацию документации при каждом
 обновлении кода через CI/CD.
 
-[Сгенерированная автоматически](https://ariinabel.github.io/lab_2/)
+[Ссылка](https://ariinabel.github.io/lab_2/)
 
-Проверьте, что документация успешно обновляется при каждом из-
-менении кода.
+До
+
+
+После
+
+![alt text](images/image6.png)
+
