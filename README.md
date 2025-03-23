@@ -36,7 +36,7 @@ pip install -r requirements-dev.txt
 pytest --cov=src --cov-report=term-missing tests/ -v
 ```
 
-[![Generated Documentation Status](https://github.com/ariinabel/lab_2/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ariinabel/lab_2/actions/workflows/pages/pages-build-deployment))
+[![Generated Documentation Status](https://github.com/ariinabel/lab_2/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ariinabel/lab_2/actions/workflows/pages/pages-build-deployment)
 
 ## Documentation
 Automatically generated documentation is published on [GitHub Pages](https://ariinabel.github.io/lab_2/).
