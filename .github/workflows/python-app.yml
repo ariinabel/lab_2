@@ -10,7 +10,8 @@ on:
     branches: [ "main", "development" ]
 
 permissions:
-  contents: read
+  contents: write
+  pull-request: write
 
 jobs:
   build:
@@ -30,3 +31,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
+    - name: Enable auto-merge for PR
+      if: github.event_name == 'pull_request'
+      uses: peter-evans/enable-pull-request-automerge@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        pull-request-number: ${{ github.event.pull_request.number }}
+        merge-method: squash
