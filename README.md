@@ -1,8 +1,6 @@
 # Calculator Application
 
-[![Python CI](https://github.com/ariinabel/lab_2/actions/workflows/test-and-docs.yml/badge.svg)](https://github.com/ariinabel/lab_2/actions)
-
-[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/ariinabel/lab_2/actions)
+[![CI status](https://github.com/ariinabel/lab_2/actions/workflows/test-and-docs.yaml/badge.svg)](https://github.com/ariinabel/lab_2/actions/workflows/test-and-docs.yaml)
 
 A simple calculator implementation with basic arithmetic operations.
 
@@ -38,7 +36,7 @@ pip install -r requirements-dev.txt
 pytest --cov=src --cov-report=term-missing tests/ -v
 ```
 
-[![Documentation Status](https://github.com/ariinabel/lab_2/actions/workflows/test-and-docs.yml/badge.svg)](https://ariinabel.github.io/lab_2/)
+[![Generated Documentation Status](https://github.com/ariinabel/lab_2/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ariinabel/lab_2/actions/workflows/pages/pages-build-deployment)/)
 
 ## Documentation
 Automatically generated documentation is published on [GitHub Pages](https://ariinabel.github.io/lab_2/).
