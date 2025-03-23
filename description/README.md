@@ -187,8 +187,9 @@ git checkout -b release
 
 До
 
+![alt text](images/image6.png)
 
 После
 
-![alt text](images/image6.png)
+![alt text](images/image7.png)
 
