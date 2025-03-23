@@ -1,6 +1,6 @@
 # Calculator Documentation
 
-Welcome to the calculator project documentation generated for Arina1!
+Welcome to the calculator project documentation generated for Arina new!
 
 ## Features
 - Basic arithmetic operations
