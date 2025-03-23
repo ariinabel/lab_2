@@ -1,6 +1,6 @@
 # Calculator Documentation
 
-Welcome to the calculator project documentation generated for Arina Belyakova!
+Welcome to the calculator project documentation generated for Aboba!
 
 ## Features
 - Basic arithmetic operations
