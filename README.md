@@ -15,6 +15,7 @@ A simple calculator implementation with basic arithmetic operations.
 ```bash
 git clone https://github.com/ariinabel/lab_2.git
 cd lab_2
+```
 
 ## Usage
 
