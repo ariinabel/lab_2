@@ -8,5 +8,4 @@ plugins:
       default_handler: python
       handlers:
         python:
-          selection:
-            filters: ["!^_"]
+          filters: ["!^_"]
