@@ -14,11 +14,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: "3.x"
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocstrings python-markdown-math
+          pip install -r requirements-dev.txt
 
       - name: Generate API docs
         run: |
@@ -30,8 +30,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          # Add these new settings:
-          keep_files: true
-          destination_dir: .
-          user_name: "ariinabel"
-          user_email: "arina_belyakova04@mail.ru"
